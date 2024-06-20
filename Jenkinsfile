@@ -16,6 +16,16 @@ pipeline {
                 '''
             }
         }
+
+        stage("Unit Tests") {
+            steps {
+                sh '''
+                ls
+                cd ./KodAplikacji
+                mvn test
+                '''
+            }
+        }
         
     }
 }

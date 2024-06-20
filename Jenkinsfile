@@ -10,6 +10,9 @@ pipeline {
             steps {
                 sh '''
                 ls
+                cd ./KodAplikacji
+                mvn compile
+                java -cp target/classes app.Main
                 '''
             }
         }

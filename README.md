@@ -2,4 +2,4 @@ Odpalenie:
 ```
     docker-compose up --build
 ```
-haslo:6972835ce6494518a4df5a9a6472c565
+haslo:69d6c606257d4bfea32c3d4bd1b5dec9

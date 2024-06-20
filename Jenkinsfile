@@ -3,28 +3,16 @@ pipeline {
     stages {
         stage("Checkout") {
             steps {
-                git url: 'https://github.com/BigMoistLochu/CPPJenkins', branch: 'main'
+                git url: 'https://github.com/BigMoistLochu/JenkinsJavaApp', branch: 'main'
             }
         }
         stage("Compile and Build") {
             steps {
                 sh '''
-                cd AplikacjaCPP
-                mkdir -p build
-                cd build
-                rm -rf *
-                cmake ..
-                make
+                ls
                 '''
             }
         }
-        stage("Unit Test") {
-            steps {
-                sh '''
-                chmod +x runTests
-                ./runTests
-                '''
-            }
-        }
+        
     }
 }

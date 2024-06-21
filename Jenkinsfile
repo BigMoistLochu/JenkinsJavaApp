@@ -11,7 +11,7 @@ pipeline {
                 sh '''
                 ls
                 cd ./KodAplikacji
-                mvn compile
+                mvn clean compile
                 java -cp target/classes app.Main
                 '''
             }
@@ -22,7 +22,7 @@ pipeline {
                 sh '''
                 ls
                 cd ./KodAplikacji
-                mvn test
+                mvn clean test
                 '''
             }
         }

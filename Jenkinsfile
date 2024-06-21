@@ -34,7 +34,7 @@ pipeline {
                 mvn jacoco:report
                 '''
                 publishHTML (target: [
-                reportDir: 'site/jacoco',
+                reportDir: 'KodAplikacji/target/site/jacoco',
                 reportFiles: 'index.html',
                 reportName: "JaCoCo Report"
                 ])

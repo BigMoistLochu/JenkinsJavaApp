@@ -27,7 +27,7 @@ pipeline {
             }
         }
 
-        stage("Unit Tests") {
+        stage("Analys Code") {
             steps {
                 sh '''
                 cd ./KodAplikacji

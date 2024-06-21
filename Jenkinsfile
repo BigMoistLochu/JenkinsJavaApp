@@ -26,6 +26,20 @@ pipeline {
                 '''
             }
         }
+
+        stage("Unit Tests") {
+            steps {
+                sh '''
+                cd ./KodAplikacji
+                mvn jacoco:report
+                '''
+                publishHTML (target: [
+                reportDir: 'site/jacoco',
+                reportFiles: 'index.html',
+                reportName: "JaCoCo Report"
+                ])
+            }
+        }
         
     }
 }
